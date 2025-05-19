@@ -1,0 +1,60 @@
+.main {
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #333;
+}
+
+.searchInput {
+  width: 20rem;
+  height: 3rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.2s;
+}
+
+.searchInput:focus {
+  border-color: #006064;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+.cacheSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cacheContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cacheChip {
+  padding: 0.5rem 1rem;
+  background-color: #e0f7fa;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #006064;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cacheChip:hover {
+  background-color: #b2ebf2;
+}
+
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
