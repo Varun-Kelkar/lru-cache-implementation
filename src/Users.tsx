@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useLRUCache } from "./hooks/useLRUCache";
 import styles from "./Users.module.css";
 const names = [
@@ -19,6 +19,7 @@ export default function Users() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [usersBackup, setUsersBackup] = useState(names);
   const [searchText, setSearchText] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const { get, put, cache } = useLRUCache(4);
 
   const onChangeSearchText = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,6 +46,7 @@ export default function Users() {
       );
       setUsers(searchResults);
       put(searchText, searchResults);
+      inputRef.current?.blur();
     }
   };
 
@@ -62,6 +64,7 @@ export default function Users() {
         <input
           type="search"
           name="search"
+          ref={inputRef}
           className={styles.searchInput}
           onInput={onChangeSearchText}
           onKeyDown={handleEntertoSearch}
