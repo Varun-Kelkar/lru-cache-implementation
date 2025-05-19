@@ -36,4 +36,4 @@ npm run dev
 
 ## Live Demo
 
-[React LRU Cache Implementation] (https://varun-kelkar.github.io/lru-cache-implementation/)
+[React LRU Cache Implementation](https://varun-kelkar.github.io/lru-cache-implementation/)
